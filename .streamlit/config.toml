@@ -1,1 +1,6 @@
-
+[theme]
+primaryColor = "#B87D7B"          # Muted Dusty Rose / Terracotta (Unisex Accent)
+backgroundColor = "#1C1917"       # Deep Espresso / Warm Charcoal
+secondaryBackgroundColor = "#2A2421" # Warm Cocoa Dark Container Background
+textColor = "#E8DFD8"              # Soft Warm Cream Text
+font = "sans serif"
