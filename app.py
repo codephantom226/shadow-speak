@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import shutil
 import moviepy as mp
-from audio_recorder_streamlit import audio_recorder
+from streamlit_mic_recorder import mic_recorder
 
 from speaking.extract_video_audio import extract_audio
 from speaking.record_user import save_browser_audio
@@ -216,14 +216,15 @@ if st.session_state.video_processed:
     st.write("Click the microphone below to record your voice from the browser:")
 
     # Audio recorder with dynamic key for resetting
-    audio_bytes = audio_recorder(
-        text="Click to start/stop recording",
-        recording_color="#e8b62c",
-        neutral_color="#6aa36f",
-        icon_name="microphone",
-        icon_size="2x",
+    audio = mic_recorder(
+        start_prompt="Start Recording 🎤",
+        stop_prompt="Stop Recording ⏹️",
         key=f"shadow_recorder_{st.session_state.recorder_key}"
     )
+    if audio:
+        audio_bytes = audio['bytes']
+    else:
+        audio_bytes = None
 
     if audio_bytes and st.session_state.results is None:
 
