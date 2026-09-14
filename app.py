@@ -1,61 +1,21 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* 1. Standard System Fonts (Clean & Original) */
+    /* 1. Reset standard font */
     html, body, p, span, label, div, h1, h2, h3, button {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     }
 
-    /* 2. Soft Warm Cream Headings */
-    h1, h2, h3 {
-        color: #F5E6D3 !important;
-    }
-
-    /* 3. Warm Espresso Main Background */
+    /* 2. Set dark background */
     .stApp {
         background-color: #1C1917 !important;
     }
 
-    /* 4. Header & Sidebar Earth Tones */
-    [data-testid="stSidebar"], [data-testid="stHeader"] {
-        background-color: #292524 !important;
-    }
-
-    /* 5. Elevated Container Cards */
-    div[data-testid="stExpander"], div[data-baseweb="card"] {
-        background-color: #292524 !important;
-        border: 1px solid #44403C !important;
-        border-radius: 10px !important;
-    }
-
-    /* 6. Main Action Buttons (Amber Gradient) */
-    .stButton > button {
-        background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
-        color: #FFFFFF !important;
-        border-radius: 8px !important;
-        border: none !important;
-        font-weight: 600 !important;
-    }
-
-    /* 7. COMPLETE RESET FOR FILE UPLOADER */
-    /* Strips out all custom pseudo-elements causing the text overlap */
-    div[data-testid="stFileUploader"] * {
-        background-image: none !important;
-    }
-    
+    /* 3. Strip ALL custom styling from the file uploader so it stops breaking */
     div[data-testid="stFileUploader"] button::before,
     div[data-testid="stFileUploader"] button::after {
-        content: none !important;
+        content: normal !important;
         display: none !important;
-    }
-
-    div[data-testid="stFileUploader"] button {
-        background: #38322E !important;
-        color: #F5E6D3 !important;
-        border: 1px solid #57514D !important;
-        border-radius: 6px !important;
-        box-shadow: none !important;
-        text-indent: 0 !important;
     }
     </style>
 """, unsafe_allow_html=True)
