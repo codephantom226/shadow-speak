@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import shutil
-import moviepy.editor as mp
+import moviepy as mp
 from audio_recorder_streamlit import audio_recorder
 
 from speaking.extract_video_audio import extract_audio
