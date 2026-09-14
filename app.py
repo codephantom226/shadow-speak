@@ -1,34 +1,34 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Restore Original / Standard System Font */
+    /* 1. Standard System Fonts (Clean & Original) */
     html, body, p, span, label, div, h1, h2, h3, button {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
     }
 
-    /* Headings */
+    /* 2. Soft Warm Cream Headings */
     h1, h2, h3 {
         color: #F5E6D3 !important;
     }
 
-    /* Warm Espresso Background */
+    /* 3. Warm Espresso Main Background */
     .stApp {
         background-color: #1C1917 !important;
     }
 
-    /* Header & Sidebar */
+    /* 4. Header & Sidebar Earth Tones */
     [data-testid="stSidebar"], [data-testid="stHeader"] {
         background-color: #292524 !important;
     }
 
-    /* Cards / Boxes */
+    /* 5. Elevated Container Cards */
     div[data-testid="stExpander"], div[data-baseweb="card"] {
         background-color: #292524 !important;
         border: 1px solid #44403C !important;
         border-radius: 10px !important;
     }
 
-    /* Standard Buttons */
+    /* 6. Main Action Buttons (Amber Gradient) */
     .stButton > button {
         background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
         color: #FFFFFF !important;
@@ -37,28 +37,25 @@ st.markdown("""
         font-weight: 600 !important;
     }
 
-    /* FIX FILE UPLOADER OVERLAP */
-    div[data-testid="stFileUploader"] {
-        background-color: #292524 !important;
-        border: 1px solid #44403C !important;
-        border-radius: 10px !important;
-        padding: 0.5rem !important;
+    /* 7. COMPLETE RESET FOR FILE UPLOADER */
+    /* Strips out all custom pseudo-elements causing the text overlap */
+    div[data-testid="stFileUploader"] * {
+        background-image: none !important;
     }
-
-    /* Clean reset for inner uploader elements */
+    
+    div[data-testid="stFileUploader"] button::before,
     div[data-testid="stFileUploader"] button::after {
-        content: none !important; /* Prevents text duplicating */
+        content: none !important;
+        display: none !important;
     }
 
     div[data-testid="stFileUploader"] button {
-        background-color: #38322E !important;
+        background: #38322E !important;
         color: #F5E6D3 !important;
         border: 1px solid #57514D !important;
         border-radius: 6px !important;
-    }
-
-    div[data-testid="stFileUploader"] [data-testid="stMarkdownContainer"] p {
-        color: #A8A29E !important;
+        box-shadow: none !important;
+        text-indent: 0 !important;
     }
     </style>
 """, unsafe_allow_html=True)
