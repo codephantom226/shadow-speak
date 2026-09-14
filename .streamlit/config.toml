@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "#C69214"          # Warm Gold
-backgroundColor = "#12151C"       # Dark Slate / Soft Black
-secondaryBackgroundColor = "#1A1E26" # Charcoal Container Accent
-textColor = "#D1D5DB"              # Light Soft Gray
+primaryColor = "#D4AF37"          # Metallic Gold
+backgroundColor = "#0F1115"       # Deep Obsidian Black
+secondaryBackgroundColor = "#181B22" # Elevated Dark Slate
+textColor = "#E2E8F0"              # Soft Crisp Platinum
 font = "serif"
