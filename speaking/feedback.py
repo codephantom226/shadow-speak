@@ -69,7 +69,7 @@ We did not find any important words to practice.
     # ---------------------------------------------------------
 
     feedback = f"""
-## 🎯 Your Shadowing Result
+## Your Shadowing Result
 
 ### Word Match: {similarity}%
 
