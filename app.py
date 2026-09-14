@@ -1,16 +1,39 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Warm Dusty Pink Accent on Headings */
-    h1, h2, h3 {
-        color: #D4A3A1 !important; /* Elegant Soft Rosewood */
-        letter-spacing: 0.5px;
+    /* 1. Import Plus Jakarta Sans Web Font */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+    /* 2. Apply typography across all text containers */
+    html, body, p, span, label, div, h1, h2, h3, button, input, textarea {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
-    /* Soften container boxes with a warm muted border */
+    /* 3. Soft Oatmeal/Cream Headers */
+    h1, h2, h3 {
+        color: #F5EBE6 !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.02em;
+    }
+
+    /* 4. Warm Cocoa Card Borders */
     div[data-testid="stExpander"], div[data-baseweb="card"] {
+        background-color: #2A2421 !important;
         border: 1px solid #443835 !important;
         border-radius: 10px !important;
+    }
+
+    /* 5. Keep File Uploader Clean and Native (No overlapping text) */
+    div[data-testid="stFileUploader"] {
+        background-color: #2A2421 !important;
+        border: 1px dashed #574843 !important;
+        border-radius: 10px !important;
+    }
+
+    div[data-testid="stFileUploader"] button::before,
+    div[data-testid="stFileUploader"] button::after {
+        content: none !important;
+        display: none !important;
     }
     </style>
 """, unsafe_allow_html=True)
