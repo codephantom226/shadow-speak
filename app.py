@@ -4,32 +4,34 @@ st.markdown("""
     /* 1. Import Plus Jakarta Sans */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-    /* 2. Target typography WITHOUT touching generic div/button elements */
-    p, span, label, h1, h2, h3, .stButton > button {
+    /* 2. Apply font ONLY to explicit typography tags (No generic divs or buttons) */
+    p, label, h1, h2, h3, .stButton > button {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
 
+    /* 3. Soft Oatmeal / Cream Headings */
     h1, h2, h3 {
         color: #F5EBE6 !important;
+        font-weight: 600 !important;
     }
 
-    /* 3. HARD RESET FOR STFILEUPLOADER OVERLAP BUG */
-    div[data-testid="stFileUploader"] button::before,
-    div[data-testid="stFileUploader"] button::after {
-        content: "" !important;
-        display: none !important;
-    }
-
-    div[data-testid="stFileUploader"] button {
-        text-indent: 0px !important;
-        font-family: inherit !important;
-    }
-
-    /* 4. Simple Warm Card Container */
+    /* 4. Warm Cocoa Cards */
     div[data-testid="stExpander"], div[data-baseweb="card"] {
         background-color: #2A2421 !important;
         border: 1px solid #443835 !important;
         border-radius: 10px !important;
+    }
+
+    /* 5. HARD OVERWRITE FOR STREAMLIT UPLOADER BUG */
+    /* Forces the duplicate internal span to hide completely */
+    [data-testid="stFileUploaderDropzone"] button div p {
+        display: none !important;
+    }
+    
+    [data-testid="stFileUploaderDropzone"] button {
+        border: 1px solid #574843 !important;
+        background-color: #2A2421 !important;
+        color: #F5EBE6 !important;
     }
     </style>
 """, unsafe_allow_html=True)
