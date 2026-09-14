@@ -1,4 +1,53 @@
 import streamlit as st
+st.markdown("""
+    <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+    /* Headings */
+    h1, h2, h3 {
+        font-family: 'Cinzel', serif !important;
+        color: #F5E6D3 !important;
+    }
+
+    /* Body text */
+    html, body, p, span, label, div {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        color: #E7DCC8 !important;
+    }
+
+    /* Warm Espresso Background */
+    .stApp {
+        background-color: #1C1917 !important;
+    }
+
+    /* Header & Sidebar */
+    [data-testid="stSidebar"], [data-testid="stHeader"] {
+        background-color: #292524 !important;
+    }
+
+    /* Cards / Boxes */
+    div[data-testid="stExpander"], div[data-baseweb="card"] {
+        background-color: #292524 !important;
+        border: 1px solid #44403C !important;
+        border-radius: 10px !important;
+    }
+
+    /* Warm Amber Buttons */
+    .stButton > button {
+        background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+        color: #FFFFFF !important;
+        border-radius: 8px !important;
+        border: none !important;
+        font-weight: 600 !important;
+    }
+
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+        color: #FFFFFF !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 import os
 import shutil
 import moviepy as mp
