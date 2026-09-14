@@ -2,10 +2,6 @@ import streamlit as st
 import os
 import shutil
 import moviepy as mp
-import os
-st.write("Current folder contents:", os.listdir("."))
-if os.path.exists("Samples"):
-    st.write("Samples folder contents:", os.listdir("Samples"))
 from audio_recorder_streamlit import audio_recorder
 
 from speaking.extract_video_audio import extract_audio
