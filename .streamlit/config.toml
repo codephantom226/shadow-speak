@@ -1,2 +1,6 @@
 [theme]
-font = "sans serif"  # Options: "sans serif", "serif", or "monospace"
+primaryColor = "#D4A359"          # Warm Gold
+backgroundColor = "#FAF7F2"       # Soft Cream
+secondaryBackgroundColor = "#F2EBE1" # Light Warm Beige
+textColor = "#3D312A"              # Warm Espresso Text
+font = "serif"
