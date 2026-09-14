@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "#D4A359"          # Warm Gold
-backgroundColor = "#FAF7F2"       # Soft Cream
-secondaryBackgroundColor = "#F2EBE1" # Light Warm Beige
-textColor = "#3D312A"              # Warm Espresso Text
+primaryColor = "#C69214"          # Warm Gold
+backgroundColor = "#12151C"       # Dark Slate / Soft Black
+secondaryBackgroundColor = "#1A1E26" # Charcoal Container Accent
+textColor = "#D1D5DB"              # Light Soft Gray
 font = "serif"
