@@ -1,21 +1,38 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* 1. Reset standard font */
+    /* 1. Clean Standard Sans-Serif Font Across Whole App */
     html, body, p, span, label, div, h1, h2, h3, button {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     }
 
-    /* 2. Set dark background */
+    /* 2. Warm Espresso Background */
     .stApp {
         background-color: #1C1917 !important;
     }
 
-    /* 3. Strip ALL custom styling from the file uploader so it stops breaking */
+    /* 3. Header & Sidebar Dark Earth Tones */
+    [data-testid="stSidebar"], [data-testid="stHeader"] {
+        background-color: #292524 !important;
+    }
+
+    /* 4. Container Cards */
+    div[data-testid="stExpander"], div[data-baseweb="card"] {
+        background-color: #292524 !important;
+        border: 1px solid #44403C !important;
+        border-radius: 10px !important;
+    }
+
+    /* 5. Clean Reset For File Uploader (Fixes Overlapping Text) */
     div[data-testid="stFileUploader"] button::before,
     div[data-testid="stFileUploader"] button::after {
-        content: normal !important;
+        content: "" !important;
         display: none !important;
+    }
+
+    div[data-testid="stFileUploader"] section {
+        background-color: #292524 !important;
+        border: 1px solid #44403C !important;
     }
     </style>
 """, unsafe_allow_html=True)
