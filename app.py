@@ -1,12 +1,12 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* 1. Import Plus Jakarta Sans Web Font */
+    /* 1. Import Plus Jakarta Sans */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-    /* 2. Apply typography across all text containers */
-    html, body, p, span, label, div, h1, h2, h3, button, input, textarea {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    /* 2. Apply font to main text, headings, and standard buttons */
+    html, body, p, span, label, h1, h2, h3, .stButton > button, input, textarea {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
     }
 
     /* 3. Soft Oatmeal/Cream Headers */
@@ -16,24 +16,24 @@ st.markdown("""
         letter-spacing: -0.02em;
     }
 
-    /* 4. Warm Cocoa Card Borders */
+    /* 4. Warm Cocoa Cards */
     div[data-testid="stExpander"], div[data-baseweb="card"] {
         background-color: #2A2421 !important;
         border: 1px solid #443835 !important;
         border-radius: 10px !important;
     }
 
-    /* 5. Keep File Uploader Clean and Native (No overlapping text) */
+    /* 5. Style File Uploader Box ONLY (DO NOT touch inner buttons) */
     div[data-testid="stFileUploader"] {
         background-color: #2A2421 !important;
         border: 1px dashed #574843 !important;
         border-radius: 10px !important;
     }
 
-    div[data-testid="stFileUploader"] button::before,
-    div[data-testid="stFileUploader"] button::after {
-        content: none !important;
-        display: none !important;
+    /* 6. Prevent font rules from touching file uploader buttons */
+    div[data-testid="stFileUploader"] button,
+    div[data-testid="stFileUploader"] button * {
+        font-family: inherit !important;
     }
     </style>
 """, unsafe_allow_html=True)
