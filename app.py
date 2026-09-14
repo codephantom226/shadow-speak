@@ -4,12 +4,12 @@ st.markdown("""
     /* 1. Import Plus Jakarta Sans */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-    /* 2. Apply font to main text, headings, and standard buttons */
-    html, body, p, span, label, h1, h2, h3, .stButton > button, input, textarea {
-        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+    /* 2. Target specific text elements directly (avoids breaking internal upload components) */
+    p, span, label, h1, h2, h3, .stButton > button, input, textarea {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
     }
 
-    /* 3. Soft Oatmeal/Cream Headers */
+    /* 3. Soft Oatmeal / Cream Headings */
     h1, h2, h3 {
         color: #F5EBE6 !important;
         font-weight: 600 !important;
@@ -23,17 +23,20 @@ st.markdown("""
         border-radius: 10px !important;
     }
 
-    /* 5. Style File Uploader Box ONLY (DO NOT touch inner buttons) */
+    /* 5. Complete CSS Isolation for File Uploader */
     div[data-testid="stFileUploader"] {
         background-color: #2A2421 !important;
         border: 1px dashed #574843 !important;
         border-radius: 10px !important;
     }
 
-    /* 6. Prevent font rules from touching file uploader buttons */
-    div[data-testid="stFileUploader"] button,
-    div[data-testid="stFileUploader"] button * {
-        font-family: inherit !important;
+    /* Isolate uploader inner DOM from style inheritance */
+    div[data-testid="stFileUploader"] * {
+        font-family: inherit;
+    }
+
+    div[data-testid="stFileUploader"] section {
+        padding: 0 !important;
     }
     </style>
 """, unsafe_allow_html=True)
