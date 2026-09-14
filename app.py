@@ -1,59 +1,41 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+    /* ... (Keep your existing CSS above) ... */
 
-    /* Headings */
-    h1, h2, h3 {
-        font-family: 'Cinzel', serif !important;
-        color: #F5E6D3 !important;
+    /* Force File Uploader Container Styling */
+    div[data-testid="stFileUploader"] {
+        background-color: #292524 !important;
+        border: 2px dashed #D97706 !important; /* Warm Amber Dashed Border */
+        border-radius: 12px !important;
+        padding: 1rem !important;
     }
 
-    /* Body text */
-    html, body, p, span, label, div {
+    /* Uploader Text & Instructions */
+    div[data-testid="stFileUploader"] section {
+        background-color: transparent !important;
+    }
+    
+    div[data-testid="stFileUploader"] span, 
+    div[data-testid="stFileUploader"] small,
+    div[data-testid="stFileUploader"] label {
+        color: #E7DCC8 !important; /* Soft warm cream text */
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        color: #E7DCC8 !important;
     }
 
-    /* Warm Espresso Background */
-    .stApp {
-        background-color: #1C1917 !important;
-    }
-
-    /* Header & Sidebar */
-    [data-testid="stSidebar"], [data-testid="stHeader"] {
-        background-color: #292524 !important;
-    }
-
-    /* Cards / Boxes */
-    div[data-testid="stExpander"], div[data-baseweb="card"] {
-        background-color: #292524 !important;
-        border: 1px solid #44403C !important;
-        border-radius: 10px !important;
-    }
-
-    /* Standard Streamlit Buttons */
-    .stButton > button {
+    /* Inner "Browse files" Button */
+    div[data-testid="stFileUploader"] button {
         background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
         color: #FFFFFF !important;
         border-radius: 8px !important;
         border: none !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-weight: 600 !important;
+        padding: 0.4rem 1rem !important;
     }
 
-    /* Force Custom Mic Recorder Button & Container Font Sync */
-    [data-testid="stCustomComponentV1"], 
-    iframe[title="streamlit_mic_recorder.mic_recorder"] {
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
-        border-radius: 8px !important;
-    }
-
-    /* Target inner component button wrapper */
-    div[element-template="stCustomComponentV1"] button,
-    iframe {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    div[data-testid="stFileUploader"] button:hover {
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
     }
     </style>
 """, unsafe_allow_html=True)
