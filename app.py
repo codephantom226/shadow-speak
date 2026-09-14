@@ -159,7 +159,6 @@ if selected_video_path is not None:
                 # Extract audio
                 audio_path = extract_audio(
                     selected_video_path,
-                    duration=clip_duration
                 )
 
                 if audio_path:
