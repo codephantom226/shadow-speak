@@ -76,8 +76,8 @@ selected_video_id = None
 
 if source_choice == "Use a sample video":
     SAMPLE_VIDEOS = {
-        "Sample 1: Weekend Market": "Samples/sample1.MOD",
-        "Sample 2: Museum Visit": "Samples/sample2.MOD"
+        "Sample 1: Weekend Market": "Samples/sample1.MOV",
+        "Sample 2: Museum Visit": "Samples/sample2.MOV"
     }
 
     sample_option = st.selectbox(
