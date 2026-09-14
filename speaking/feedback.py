@@ -15,7 +15,7 @@ def generate_feedback(comparison):
         return {
             "similarity": 0.0,
             "feedback": """
-## 🎯 Your Shadowing Result
+## Your Shadowing Result
 
 ### We couldn't understand your recording
 
