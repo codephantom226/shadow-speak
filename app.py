@@ -1,9 +1,14 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Clean, high-legibility default typography */
-    html, body, p, span, label, div, h1, h2, h3 {
+    /* Restore Original / Standard System Font */
+    html, body, p, span, label, div, h1, h2, h3, button {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    }
+
+    /* Headings */
+    h1, h2, h3 {
+        color: #F5E6D3 !important;
     }
 
     /* Warm Espresso Background */
@@ -30,6 +35,30 @@ st.markdown("""
         border-radius: 8px !important;
         border: none !important;
         font-weight: 600 !important;
+    }
+
+    /* FIX FILE UPLOADER OVERLAP */
+    div[data-testid="stFileUploader"] {
+        background-color: #292524 !important;
+        border: 1px solid #44403C !important;
+        border-radius: 10px !important;
+        padding: 0.5rem !important;
+    }
+
+    /* Clean reset for inner uploader elements */
+    div[data-testid="stFileUploader"] button::after {
+        content: none !important; /* Prevents text duplicating */
+    }
+
+    div[data-testid="stFileUploader"] button {
+        background-color: #38322E !important;
+        color: #F5E6D3 !important;
+        border: 1px solid #57514D !important;
+        border-radius: 6px !important;
+    }
+
+    div[data-testid="stFileUploader"] [data-testid="stMarkdownContainer"] p {
+        color: #A8A29E !important;
     }
     </style>
 """, unsafe_allow_html=True)
