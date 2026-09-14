@@ -1,4 +1,19 @@
 import streamlit as st
+st.markdown("""
+    <style>
+    /* Warm Dusty Pink Accent on Headings */
+    h1, h2, h3 {
+        color: #D4A3A1 !important; /* Elegant Soft Rosewood */
+        letter-spacing: 0.5px;
+    }
+
+    /* Soften container boxes with a warm muted border */
+    div[data-testid="stExpander"], div[data-baseweb="card"] {
+        border: 1px solid #443835 !important;
+        border-radius: 10px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 import os
 import shutil
 import moviepy as mp
