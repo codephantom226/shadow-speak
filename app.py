@@ -139,10 +139,7 @@ if source_choice == "Use a sample video":
 # ---------------------------------------------------------
 
 else:
-    uploaded_video = st.file_uploader(
-        "Upload a short speaking video",
-        type=["mp4", "mov", "avi"]
-    )
+    uploaded_file = st.file_uploader("Upload a short speaking video", type=["mp4", "mov", "avi"], key="clean_uploader_v2")
 
     if uploaded_video is not None:
         os.makedirs("data/videos", exist_ok=True)
