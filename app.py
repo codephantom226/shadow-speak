@@ -33,18 +33,27 @@ st.markdown("""
         border-radius: 10px !important;
     }
 
-    /* Warm Amber Buttons */
+    /* Standard Streamlit Buttons */
     .stButton > button {
         background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
         color: #FFFFFF !important;
         border-radius: 8px !important;
         border: none !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-weight: 600 !important;
     }
 
-    .stButton > button:hover {
-        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
-        color: #FFFFFF !important;
+    /* Force Custom Mic Recorder Button & Container Font Sync */
+    [data-testid="stCustomComponentV1"], 
+    iframe[title="streamlit_mic_recorder.mic_recorder"] {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        border-radius: 8px !important;
+    }
+
+    /* Target inner component button wrapper */
+    div[element-template="stCustomComponentV1"] button,
+    iframe {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
     </style>
 """, unsafe_allow_html=True)
