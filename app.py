@@ -1,41 +1,35 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* ... (Keep your existing CSS above) ... */
+    /* Clean, high-legibility default typography */
+    html, body, p, span, label, div, h1, h2, h3 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    }
 
-    /* Force File Uploader Container Styling */
-    div[data-testid="stFileUploader"] {
+    /* Warm Espresso Background */
+    .stApp {
+        background-color: #1C1917 !important;
+    }
+
+    /* Header & Sidebar */
+    [data-testid="stSidebar"], [data-testid="stHeader"] {
         background-color: #292524 !important;
-        border: 2px dashed #D97706 !important; /* Warm Amber Dashed Border */
-        border-radius: 12px !important;
-        padding: 1rem !important;
     }
 
-    /* Uploader Text & Instructions */
-    div[data-testid="stFileUploader"] section {
-        background-color: transparent !important;
-    }
-    
-    div[data-testid="stFileUploader"] span, 
-    div[data-testid="stFileUploader"] small,
-    div[data-testid="stFileUploader"] label {
-        color: #E7DCC8 !important; /* Soft warm cream text */
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
+    /* Cards / Boxes */
+    div[data-testid="stExpander"], div[data-baseweb="card"] {
+        background-color: #292524 !important;
+        border: 1px solid #44403C !important;
+        border-radius: 10px !important;
     }
 
-    /* Inner "Browse files" Button */
-    div[data-testid="stFileUploader"] button {
+    /* Standard Buttons */
+    .stButton > button {
         background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
         color: #FFFFFF !important;
         border-radius: 8px !important;
         border: none !important;
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-weight: 600 !important;
-        padding: 0.4rem 1rem !important;
-    }
-
-    div[data-testid="stFileUploader"] button:hover {
-        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
     }
     </style>
 """, unsafe_allow_html=True)
