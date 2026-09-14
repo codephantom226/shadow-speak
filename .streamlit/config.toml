@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "#D97706"          # Warm Terracotta / Amber
-backgroundColor = "#1C1917"       # Deep Warm Espresso / Dark Earth
-secondaryBackgroundColor = "#292524" # Lighter Warm Charcoal
-textColor = "#F5F5F4"              # Soft Warm Cream
+primaryColor = "#D97706"          
+backgroundColor = "#1C1917"       
+secondaryBackgroundColor = "#292524" 
+textColor = "#E7DCC8"              
 font = "serif"
