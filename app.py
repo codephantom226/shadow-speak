@@ -158,7 +158,7 @@ if selected_video_path is not None:
 
                 # Extract audio
                 audio_path = extract_audio(
-                    selected_video_path,
+                    selected_video_path, "temp_audio.wav"
                 )
 
                 if audio_path:
